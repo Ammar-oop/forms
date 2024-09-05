@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-image: url('https://cdn.prod.website-files.com/6009ec8cda7f305645c9d91b/629a30c55cc6c7d921bf0f2d_6296062b1343b06a84c13d18_4-website-optimization-strategies-that-will-help-attract-new-users%20(1).jpg'); 
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+        }
+        fieldset {
+            border: 2px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: rgba(255, 255, 255, 0.8); 
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, select, textarea {
+            margin-top: 5px;
+            padding: 8px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>User Information Form</h1>
+
+    <form action="/submit" method="post">
+        <!-- Group of personal details -->
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <!-- Label and input for name -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <!-- Label and input for email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <!-- Label and input for password -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        </fieldset>
+
+        <!-- Group of address details -->
+        <fieldset>
+            <legend>Address</legend>
+
+            <!-- Label and textarea for address -->
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="4" placeholder="Enter your address"></textarea>
+        </fieldset>
+
+        <!-- Group for gender selection -->
+        <fieldset>
+            <legend>Gender</legend>
+
+            <!-- Radio buttons for gender selection -->
+            <label for="male"><input type="radio" id="male" name="gender" value="male"> Male</label>
+            <label for="female"><input type="radio" id="female" name="gender" value="female"> Female</label>
+        </fieldset>
+
+        <!-- Group for selecting country -->
+        <fieldset>
+            <legend>Additional Information</legend>
+
+            <!-- Label and select dropdown for country -->
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+                <option value="usa">USA</option>
+                <option value="uk">United Kingdom</option>
+                <option value="pakistan">Pakistan</option>
+                <option value="india">India</option>
+            </select>
+        </fieldset>
+
+        <!-- Submit button -->
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>
